@@ -12,8 +12,8 @@ class User {
     }
 
     public boolean validatePassword(String password) {
-        return "1234".equals(password);
-    }
+        return this.password.equals(password);
+    } //here1
 
     public void updatePassword(String newPassword) {
         this.password = newPassword;
@@ -24,8 +24,8 @@ class User {
     }
 
     public String getUsername() {
-        return "Moazzam";
-    }
+        return username;
+    }//here2
 }
 
 class Question {
@@ -88,7 +88,7 @@ class Exam {
 
 class OnlineExaminationSystem {
     public static void main(String[] args) {
-        User user = new User("student123", "password", "John Doe");
+        User user = new User("MM2001", "1234", "Moazzam Majid");
         Question[] questions = {
                 new Question("What is the capital of France?", new String[]{"Paris", "London", "Berlin", "Rome"}, 1),
                 new Question("Which planet is known as the Red Planet?", new String[]{"Venus", "Mars", "Jupiter", "Saturn"}, 2),
